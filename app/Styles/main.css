@@ -18,12 +18,12 @@ form {
 .status {
 	height: 25px;
 	width: 100%;
-	background: #dcdcdc;
 }
 
 h1 {
 	font-size: 2.5em;
 	letter-spacing: 15px;
+	text-decoration: underline;
 }
 
 .program-text {
