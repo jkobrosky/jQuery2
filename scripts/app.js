@@ -38,6 +38,10 @@ $(document).ready(function() {
 		var savedArchivedToDo = $('#archivedList').html();
 		console.log('archived saved: ' + savedArchivedToDo);
 
+		localStorage.setItem('newList', savedNewTodo);
+		localStorage.setItem('currentList', savedProgressToDo);
+		localStorage.setItem('archivedList', savedArchivedToDo);
+
 	});
 
 	// Opens form
@@ -101,6 +105,15 @@ $(document).ready(function() {
 
 	}
 
+	if (localStorage.getItem('currentList')) {
+		$('#currentList').html(localStorage.getItem('currentList'));
+		if (localStorage.getItem('newList')) {
+			$('#newList').html(localStorage.getItem('newList'));
+		} if (localStorage.getItem('archivedList')) {
+			$('#archivedList').html(localStorage.getItem('archivedList'));
+			}
 
+		window.localStorage.clear();
+	}
 
 });

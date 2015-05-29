@@ -6,6 +6,10 @@ div {
 	margin : 5px;
 }
 
+a {
+	text-decoration: none;
+}
+
 form {
 	margin: 5px;
 }
