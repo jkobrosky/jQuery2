@@ -12,7 +12,6 @@ $(document).ready(function() {
 	var addTask = function(task) {
 		if (task) {
 			task = new Task(task);
-			console.log(task);
 			listo.push(task);
 
 			$('#newItemInput').val('');
@@ -42,11 +41,9 @@ $(document).ready(function() {
 	$(document).on('click', '#item', function(e) {
 		e.preventDefault();
 			var task = this;
-			task.id = 'inProgress';
-
 			advanceTask(task);
+			task.id = 'inProgress';
 			$('#currentList').append(this.outerHTML);
-			// task.remove()
 	});
 
 	$(document).on('click', '#inProgress', function(e) {
@@ -56,14 +53,12 @@ $(document).ready(function() {
 		var changeIcon = task.outerHTML.replace('glyphicon-arrow-right', 'glyphicon-remove');
 		advanceTask(task);
 		$('#archivedList').append(changeIcon);
-		// task.remove()
 	});
 
 	$(document).on('click', '#archived', function(e) {
 		e.preventDefault();
 		var task = this;
 		advanceTask(task);
-		// task.remove()
 	});
 
 	var advanceTask = function(task) {
@@ -85,16 +80,5 @@ $(document).ready(function() {
 		task.remove();
 
 	}
-
-
-
-
-
-
-
-
-
-
-
 
 });

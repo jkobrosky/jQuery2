@@ -2,32 +2,45 @@
 <html>
 <head>
 	<title>Listo</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 	<link type='text/css' rel='stylesheet' href='file:///Users/josephkobrosky/GitHub/DevMountain/jQuery2/app/Styles/main.css' />
 </head>
 <body>
-	<form id='newTaskForm'>
-		<label>New Item</label>
-			<input id='newItemInput' placeholder='new task'>
-			<button id='saveNewItem'>Save</button>
-			<button id='cancel'>Cancel</button>
+
+	<header>
+		<h1 class='header program-text'>Listo!</h1>
+	</header>
+
+	<div class='status program-text'>
+		<span class='status-bar'>
+		</span>
+	</div>
+
+	<form class='program-text' id='newTaskForm'>
+		<label class='program-text'>New Item</label>
+			<input class='program-text' id='newItemInput' placeholder='new task'>
+			<button class='program-text' id='saveNewItem'>Save</button>
+			<button class='program-text' id='cancel'>Cancel</button>
 	</form>
 
 	<div class='new-item-header'>
 		<button href='#' class='pull-right pencil' id='newListItem' style=''>New</button>
 	</div>
 
-	<div id='newList'>
+	<div class='program-text'>
 		New List
+		<ul class='newList todo-text' id='newList'></ul>
 	</div>
 
-	<div class='panel'>
+	<div class='panel program-text'>
 		In Progress
-		<ul class='list-group' id='currentList'></ul>
+		<ul class='list-group todo-text' id='currentList'></ul>
 	</div>
 
-	<div class='panel'>
+	<div class='panel program-text'>
 		Archived
-		<ul class='list-group' id='archivedList'></ul>
+		<ul class='list-group todo-text' id='archivedList'></ul>
 	</div>
 
 
